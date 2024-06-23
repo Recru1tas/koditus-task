@@ -8,10 +8,10 @@ COPY go.mod go.sum main.go ./
 RUN go mod download
 
 # Build
-RUN CGO_ENABLED=0 GOOS=linux go build -o /docker-koditus-task
+RUN CGO_ENABLED=0 GOOS=linux go build -o /docker-fibo-seq
 
 # Expose port
 EXPOSE 8080
 
 # Run
-CMD ["/docker-koditus-task"]
+CMD ["/docker-fibo-seq"]

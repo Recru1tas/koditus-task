@@ -19,12 +19,13 @@ Terrafrom and AWS account is required to setup this solution
     terraform apply -var-file="prod.tfvars"
     ```
 
+- After terraform apply completes it outputs the loadbalancer name to reach the application. **Application runs on port 8080** so :8080 needs to be added to loadbalancer URL.
+
 ### To destroy the solution
 
 ```
 terraform destroy -var-file="prod.tfvars"
 ```
-
 
 
 ## Architectural explanation
